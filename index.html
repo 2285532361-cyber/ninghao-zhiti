@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>宁好智体 · 大学生全纳体育健康支持平台</title>
+  <title>宁好智体 V2.0.2 · 全纳体育健康促进</title>
   <meta name="description" content="宁好智体：大学生体测评分、运动前筛查与16周个性化体育课计划。">
   <style>
 :root { --ink:#152925;--muted:#6e807b;--deep:#123a33;--deep2:#0f2f2a;--accent:#10a987;--line:#e4eae7;--surface:#fff;--bg:#f6f8f6;--green-soft:#e7f5ef;--orange:#be741e;--orange-soft:#fff7e7;--red:#a8453e;--red-soft:#fff0ed;--shadow:0 14px 40px rgba(22,45,35,.035); }
@@ -28,9 +28,14 @@
 
 .mobile-steps{display:none}@media(max-width:670px){.mobile-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border-bottom:1px solid var(--line);gap:0;padding:0 12px}.mobile-step{border:0;border-bottom:2px solid transparent;background:transparent;font-size:11px;font-weight:600;color:#738a7b;padding:13px 0;cursor:pointer}.mobile-step.active{color:#14674e;border-bottom-color:#159473}.mobile-step:focus-visible{outline:2px solid #4baf8a;outline-offset:-2px}}@media print{.mobile-steps{display:none!important}}
 
+textarea{font:inherit;color:var(--ink);width:100%;resize:vertical;min-height:80px;border:1px solid #c8d5ce;border-radius:8px;padding:12px;background:#fff}textarea:focus-visible{outline:3px solid #85d8c1;outline-offset:2px}.support-tags{display:flex;gap:12px;flex-wrap:wrap;padding:12px 0}.support-tags label{padding:8px 12px;background:var(--bg);border:1px solid var(--line);border-radius:6px}.support-tags input{width:auto;margin-right:7px;accent-color:var(--accent)}.v2-note{padding:16px 20px;border-left:3px solid var(--accent);background:var(--green-soft);margin-bottom:24px}.v2-note p{margin:4px 0}.v2-section h2{margin-top:0}.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.evidence-card{padding:22px;background:#fff;border:1px solid var(--line);border-radius:12px}.evidence-card h3{margin:8px 0;font-size:17px}.evidence-card a{color:#126a53;overflow-wrap:anywhere}.evidence-card small{color:#52645e}.evidence-card p{margin:8px 0}.record-row{padding:14px;background:#fff;border-bottom:1px solid var(--line)}.field input,.field select{max-width:100%}form{margin:0}.check-line{display:flex;align-items:flex-start;gap:10px;margin:16px 0}.check-line input{margin-top:6px;flex:none;width:18px;height:18px}.steps{gap:4px}.step{padding-top:12px;padding-bottom:12px}.step-label small{font-size:11px}.sidebar{padding-top:24px}.side-headline{margin-top:20px}.main{min-width:0}.page{scroll-margin-top:20px}.site-footer{flex-wrap:wrap;gap:12px}.mobile-steps{overflow-x:auto}.mobile-step{white-space:nowrap;flex-shrink:0}button{min-height:40px}.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:16px;top:12px;background:white;z-index:99;padding:8px}#recordMessage{color:#145c48}input,select,textarea{scroll-margin-top:30px}@media(max-width:760px){.evidence-grid{grid-template-columns:1fr}.actions{flex-wrap:wrap;gap:12px}.actions-pair{flex-wrap:wrap}.v2-note{padding:14px}.content{overflow-wrap:anywhere}.check-line{font-size:14px}.form-grid.two{grid-template-columns:1fr}}
+@media print{body{background:white!important}.sidebar,.topbar,.mobile-steps,.progress,.actions,button,.chat-form,.chat-prompts,.site-footer,.skip-link{display:none!important}.main,.content{width:100%!important;margin:0!important;padding:0!important}.print-all .page:not(.hidden){display:block!important}.page.hidden{display:none!important}.print-all #page2,.print-all #page4,.print-all #page5{display:block!important}.print-all #page0,.print-all #page1,.print-all #page3,#supportForm,#recordForm,#coverageForm{display:none!important}.panel,.evidence-card,.session-card{break-inside:avoid;box-shadow:none}.evidence-grid{display:block}.evidence-card{margin-bottom:12px}a{overflow-wrap:anywhere}h1{font-size:24px!important}#printPrivacy{display:block!important}.breakdown{display:block!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+.evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.evidence-card{min-width:0;overflow-wrap:anywhere}.content p,.session-card p,.recovery-item p,.nutrition-timing p,.nutrition-science p{font-size:14px;line-height:1.85}.content small{font-size:12px}.training-block p,.week-table{font-size:13px}@media(max-width:1000px){.evidence-grid{grid-template-columns:1fr}}
+@media print{body:not(.print-all) .page[id].hidden{display:none!important}body:not(.print-all) .page[id]:not(.hidden){display:block!important}@page{margin:14mm}}
 </style>
 </head>
-<body>
+<body><a class="skip-link" href="#page0">跳到主要内容</a>
   <div class="app-shell">
     <aside class="sidebar" aria-label="主导航">
       <a class="brand" href="#" aria-label="宁好智体 首页">
@@ -39,15 +44,17 @@
       </a>
       <div class="side-kicker">NINGHAO · SMART PHYSICAL EDUCATION</div>
       <div class="side-headline">让每一种身体条件，<br>都有参与体育的路径。</div>
-      <div class="side-desc">从体测数据到运动参与支持，将个体差异转化为可执行的课堂行动。</div>
+      <div class="side-desc">全纳教育视域下体质弱势大学生健康促进模式：功能、活动、参与与环境共同评估。</div>
       <div class="side-rule"></div>
       <nav class="steps" id="stepNav">
         <button type="button" class="step active" data-step="0"><span class="step-num">01</span><span class="step-label">体测数据录入<small>评分与短板识别</small></span><span class="step-icon">↗</span></button>
         <button type="button" class="step" data-step="1"><span class="step-num">02</span><span class="step-label">运动前健康筛查<small>风险与适配识别</small></span><span class="step-icon">↗</span></button>
         <button type="button" class="step" data-step="2"><span class="step-num">03</span><span class="step-label">个人训练支持<small>逐周课表与拉伸恢复</small></span><span class="step-icon">↗</span></button>
         <button type="button" class="step" data-step="3"><span class="step-num">04</span><span class="step-label">运动营养专题<small>食堂搭配与训练恢复</small></span><span class="step-icon">↗</span></button>
+<button type="button" class="step" data-step="4"><span class="step-num">05</span><span class="step-label">过程与科研评价<small>真实记录 · 不预设效果</small></span></button>
+<button type="button" class="step" data-step="5"><span class="step-num">06</span><span class="step-label">证据与适用范围<small>来源可查 · 边界清晰</small></span></button>
       </nav>
-      <div class="sidebar-bottom"><span class="side-dot"></span> 校园全纳健康促进 · 原型 V1.1 <p>知行合一 · 因材施教</p></div>
+      <div class="sidebar-bottom"><span class="side-dot"></span> 校园全纳健康促进 · V2.0.2 · 精简版 <p>知行合一 · 因材施教</p></div>
     </aside>
 
     <main class="main">
@@ -58,9 +65,9 @@
       </header>
       <nav class="mobile-steps" aria-label="移动端导航">
         <button type="button" class="mobile-step active" data-step="0">体测评分</button><button type="button" class="mobile-step" data-step="1">健康筛查</button><button type="button" class="mobile-step" data-step="2">训练计划</button><button type="button" class="mobile-step" data-step="3">运动营养</button>
-      </nav>
+      <button type="button" class="mobile-step" data-step="4">过程与科研评价</button><button type="button" class="mobile-step" data-step="5">证据与适用范围</button></nav>
       <div class="content">
-        <div class="progress" aria-label="流程进度"><span class="progress-label" id="progressText">评估流程 · 第 1 / 4 步</span><span class="progress-rail"><span id="progressFill"></span></span></div>
+        <div class="progress" aria-label="流程进度"><span class="progress-label" id="progressText">评估流程 · 第 1 / 6 页</span><span class="progress-rail"><span id="progressFill"></span></span></div>
         <div id="feedback" class="feedback hidden" role="alert"></div>
 
         <section class="page" id="page0">
@@ -79,26 +86,26 @@
           <div class="panel">
             <div class="panel-head"><div><h2>体测成绩</h2><p>各项成绩均按原始单位录入；耐力跑请填写 mm:ss。</p></div><span class="small-counter">02 / 02</span></div>
             <div class="form-grid two metrics">
-              <label class="field"><span>身高 <small>cm</small> <em>*</em></span><div class="input-wrap"><input inputmode="decimal" type="number" id="height" placeholder="例如 172" min="100" max="230" step="0.1"><span>cm</span></div></label>
-              <label class="field"><span>体重 <small>kg</small> <em>*</em></span><div class="input-wrap"><input inputmode="decimal" type="number" id="weight" placeholder="例如 65" min="25" max="220" step="0.1"><span>kg</span></div></label>
-              <label class="field"><span>肺活量 <small>mL</small> <em>*</em></span><div class="input-wrap"><input inputmode="numeric" type="number" id="lung" placeholder="例如 3800" min="300" max="10000" step="1"><span>mL</span></div></label>
-              <label class="field"><span>50米跑 <small>秒</small> <em>*</em></span><div class="input-wrap"><input inputmode="decimal" type="number" id="sprint" placeholder="例如 8.1" min="4" max="30" step="0.1"><span>s</span></div></label>
-              <label class="field"><span>坐位体前屈 <small>cm</small> <em>*</em></span><div class="input-wrap"><input inputmode="decimal" type="number" id="flexibility" placeholder="例如 12.5" min="-30" max="40" step="0.1"><span>cm</span></div></label>
-              <label class="field"><span>立定跳远 <small>cm</small> <em>*</em></span><div class="input-wrap"><input inputmode="numeric" type="number" id="longjump" placeholder="例如 205" min="50" max="350" step="1"><span>cm</span></div></label>
-              <label class="field"><span id="strengthLabel">引体向上</span> <small id="strengthUnit">次</small> <em>*</em></span><div class="input-wrap"><input inputmode="numeric" type="number" id="strength" placeholder="例如 12" min="0" max="150" step="1"><span>次</span></div></label>
-              <label class="field"><span id="runLabel">1000米跑</span> <small>分:秒</small> <em>*</em></span><div class="input-wrap"><input inputmode="numeric" type="text" id="endurance" placeholder="例如 4:02" maxlength="6" autocomplete="off"><span>mm:ss</span></div></label>
+              <label class="field"><span>身高 <small>cm</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="decimal" type="number" id="height" placeholder="例如 172" min="100" max="230" step="0.1"><span>cm</span></div></label>
+              <label class="field"><span>体重 <small>kg</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="decimal" type="number" id="weight" placeholder="例如 65" min="25" max="220" step="0.1"><span>kg</span></div></label>
+              <label class="field"><span>肺活量 <small>mL</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="numeric" type="number" id="lung" placeholder="例如 3800" min="300" max="10000" step="1"><span>mL</span></div></label>
+              <label class="field"><span>50米跑 <small>秒</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="decimal" type="number" id="sprint" placeholder="例如 8.1" min="4" max="30" step="0.1"><span>s</span></div></label>
+              <label class="field"><span>坐位体前屈 <small>cm</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="decimal" type="number" id="flexibility" placeholder="例如 12.5" min="-30" max="40" step="0.1"><span>cm</span></div></label>
+              <label class="field"><span>立定跳远 <small>cm</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="numeric" type="number" id="longjump" placeholder="例如 205" min="50" max="350" step="1"><span>cm</span></div></label>
+              <label class="field"><span id="strengthLabel">引体向上</span> <small id="strengthUnit">次</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="numeric" type="number" id="strength" placeholder="例如 12" min="0" max="150" step="1"><span>次</span></div></label>
+              <label class="field"><span id="runLabel">1000米跑</span> <small>分:秒</small> <em>*</em></span><div class="input-wrap"><input autocomplete="off" inputmode="numeric" type="text" id="endurance" placeholder="例如 4:02" maxlength="6" autocomplete="off"><span>mm:ss</span></div></label>
             </div>
-            <div class="form-foot"><span>注：立定跳远在你的需求中重复出现，系统只计入一次。</span><button class="text-button" id="sampleButton" type="button">填入演示样例 ↗</button></div>
+            <div class="form-foot"><span>保留原版七项评分；无近期成绩者可先完成健康与参与评估。</span><button class="text-button" id="sampleButton" type="button">填入演示样例 ↗</button></div>
           </div>
-          <div class="note-inline"><span class="note-star">※</span><div><strong>计分口径</strong>基础分采用 15 / 15 / 20 / 10 / 10 / 10 / 20 权重，加分项按所附表格计算并单独展示。低于表中最低档的成绩暂按0分处理；请以学校正式判分结果为准。</div></div>
-          <div class="actions"><span class="actions-hint">录入完成后，进入健康筛查</span><button class="btn btn-primary" type="button" id="toHealth">计算成绩，下一步 <span>→</span></button></div>
+          <div class="note-inline"><span class="note-star">※</span><div><strong>计分口径</strong>基础分采用 15 / 15 / 20 / 10 / 10 / 10 / 20 权重，加分项按所附表格计算并单独展示。低于表中最低档的成绩暂按0分处理（原版约定，非表中明定）；请以学校正式判分结果为准。</div></div>
+          <div class="actions"><span class="actions-hint">录入完成后，进入健康筛查</span><button class="btn btn-outline" type="button" id="skipMetrics">暂不录入体测，先筛查</button><button class="btn btn-primary" type="button" id="toHealth">计算成绩，下一步 <span>→</span></button></div>
         </section>
 
         <section class="page hidden" id="page1">
-          <div class="page-intro"><div class="chapter">02 / HEALTH READINESS</div><h1>让运动建议从安全开始<span class="period">.</span></h1><p>以下是参考 NSCA 健康/医学评估理念、PAR-Q+ 与运动前筛查原则编写的简明问卷，<strong>并非官方量表原文或医疗诊断</strong>。不需要填写具体病历。</p></div>
+          <div class="page-intro"><div class="chapter">02 / HEALTH READINESS</div><h1>让运动建议从安全开始<span class="period">.</span></h1><p>以下是参考 ACSM 运动前筛查原则编写的项目安全问卷，<strong>并非官方量表原文或医疗诊断</strong>。不需要填写具体病历。</p></div>
           <div class="safety-note"><span class="shield-icon">＋</span><div><strong>运动前筛查声明</strong><p>若近期出现胸痛、意识丧失等警示症状，或医生要求限制运动，请先接受专业评估。填写“不确定”时也会采用保守策略。遇急性严重症状应及时求助。</p></div></div>
-          <div class="panel health-panel"><div class="panel-head"><div><h2>健康状态与既往史</h2><p>请选择“否 / 是 / 不确定”，所有问题都需要回答。</p></div><span class="small-counter" id="healthCount">0 / 11</span></div><div id="healthQuestions"></div></div>
-          <div class="panel compact-panel"><div class="panel-head"><div><h2>日常运动情况</h2><p>便于匹配适应期，非医学筛查依据。</p></div></div><div class="form-grid two"><label class="field"><span>过去3个月运动习惯</span><select id="habit"><option value="beginner">很少或不规律</option><option value="some">每周约1—2次</option><option value="regular">每周约3次及以上</option></select></label><label class="field"><span>优先改善方向</span><select id="goal"><option value="auto">由体测数据智能识别</option><option value="endurance">耐力与活动持续性</option><option value="strength">力量与肌肉耐力</option><option value="speed">速度与动作技术</option><option value="mobility">柔韧与活动度</option><option value="general">综合参与和运动习惯</option></select></label></div></div>
+          <div class="panel health-panel"><div class="panel-head"><div><h2>健康状态与既往史</h2><p>请选择“否 / 是 / 不确定”，所有问题都需要回答。</p></div><span class="small-counter" id="healthCount">0 / 12</span></div><div id="healthQuestions"></div></div>
+          <form id="supportForm" autocomplete="off" onsubmit="return false"><div class="panel"><h2>描述标签 · 可多选、可不选</h2><p>只描述支持需求，不由标签诊断或分配风险；不必透露具体疾病。</p><div class="support-tags"><label><input autocomplete="off" type="checkbox" name="tag" value="疾病类">疾病类</label><label><input autocomplete="off" type="checkbox" name="tag" value="体形异常类">体形异常类</label><label><input autocomplete="off" type="checkbox" name="tag" value="易伤类">易伤类</label><label><input autocomplete="off" type="checkbox" name="tag" value="术后/其他">术后/其他</label></div><h2>功能—活动—参与—环境</h2><p>ICF启发的项目评估，不是经过验证的ICF量表；UDL 3.0用于提供选择、可及材料与多种表达方式。[E01、E02]</p><div class="form-grid two"><label class="field"><span>医学运动限制（必答）</span><select id="medicalLimit"><option value="">请选择</option><option value="none">无已知限制</option><option value="conditional">有条件/需监督</option><option value="unknown">不清楚，需核实</option><option value="forbid">明确禁止运动</option></select></label><label class="field"><span>当前功能（必答）</span><select id="functionStatus"><option value="">请选择</option><option value="free">日常动作无明显限制</option><option value="limited">行走/上下肢活动受限</option><option value="unknown">功能状况不确定</option></select></label><label class="field"><span>当前活动</span><select id="activityLevel"><option value="low">日常活动少，起点较低</option><option value="moderate">可以舒适步行与日常活动</option><option value="regular">近3个月每周≥3天、每次≥30分钟中等强度结构化活动</option></select></label><label class="field"><span>最主要参与障碍</span><select id="barrier"><option value="none">暂未发现</option><option value="access">场地或器材不可及</option><option value="task">统一任务难度不合适</option><option value="confidence">信心/兴趣不足</option><option value="time">时间或支持不足</option></select></label><label class="field"><span>课程可及性支持</span><select id="access"><option value="none">暂不需要</option><option value="rest">允许分段与休息</option><option value="materials">图文/口头示范</option><option value="space">场地/器材调整</option><option value="peer">自愿同伴支持</option></select></label></div><h3>专业允许范围 · 仅在已有专业评估时填写</h3><p>有疾病或限制不等于永久禁动；但网页不能代替专业评估。只填教学需要的条件，勿抄录完整病历。</p><div class="form-grid two"><label class="field"><span>是否已有针对当前状况的专业评估</span><select id="clearance"><option value="no">尚无/需复核</option><option value="yes">已有明确允许范围</option></select></label><label class="field"><span>明确允许的活动类型</span><textarea id="scope" maxlength="350" autocomplete="off" placeholder="只写活动条件，不填病名、姓名或病历"></textarea></label><label class="field"><span>强度/时长上限、禁止项目及停止条件</span><textarea id="limit" maxlength="350" autocomplete="off" placeholder="只写活动条件，不填病名、姓名或病历"></textarea></label><label class="field"><span>所需监督、有效期与复核安排</span><textarea id="supervision" maxlength="350" autocomplete="off" placeholder="只写活动条件，不填病名、姓名或病历"></textarea></label></div><label class="check-line"><input autocomplete="off" type="checkbox" id="permissionCurrent">确认上述条件来自当前有效的专业意见，状况未变化；本网页不核验或签发医学许可。</label></div></form><div class="panel compact-panel"><div class="panel-head"><div><h2>日常运动情况</h2><p>便于匹配适应期，非医学筛查依据。</p></div></div><div class="form-grid two"><label class="field"><span>过去3个月运动习惯</span><select id="habit"><option value="beginner">很少或不规律</option><option value="some">每周约1—2次</option><option value="regular">每周约3次及以上</option></select></label><label class="field"><span>优先改善方向</span><select id="goal"><option value="auto">由体测数据智能识别</option><option value="endurance">耐力与活动持续性</option><option value="strength">力量与肌肉耐力</option><option value="speed">速度与动作技术</option><option value="mobility">柔韧与活动度</option><option value="general">综合参与和运动习惯</option></select></label></div></div>
           <div class="note-inline"><span class="note-star">※</span><div><strong>隐私提示</strong>当前版本只在浏览器本地内存处理，页面刷新后数据会清除。请不要在公共电脑上留下打印报告，也不要输入姓名或完整诊断记录。</div></div>
           <div class="actions"><button class="btn btn-ghost" type="button" id="back0">← 返回修改成绩</button><button class="btn btn-primary" type="button" id="toPlan">分析健康状态，生成建议 <span>→</span></button></div>
         </section>
@@ -111,16 +118,16 @@
           <div class="breakdown" id="scoreBreakdown"></div>
           <div class="section-top"><div><h2>智能分析与优先方向</h2><p>本地规则分析，依据分数与权重生成可解释的建议。</p></div></div>
           <div id="insights" class="insights"></div>
-          <div class="section-top"><div><h2>16周 · 周期化训练课表</h2><p>分四个4周训练块；每周有具体活动、强度、组数、课后拉伸与恢复。第4、8、12、16周减量复盘。</p></div></div>
-          <div id="trainingContent"></div>
-          <div class="section-top"><div><h2>宁好智体 · 智能问答</h2><p>基于当前评估给出规则驱动回答；首版未连接在线大模型。</p></div></div>
-          <div class="assistant-box"><div id="chatMessages" class="chat-messages" aria-live="polite"></div><div class="chat-prompts"><button type="button" data-prompt="我的主要短板是什么">我的主要短板是什么？</button><button type="button" data-prompt="这周我应该怎么安排">这周我应该怎么安排？</button><button type="button" data-prompt="运动时不舒服怎么办">运动时不舒服怎么办？</button></div><form id="chatForm" class="chat-form"><input id="chatInput" type="text" maxlength="120" placeholder="例如：我想先改善耐力，怎么开始？" aria-label="向智能助手提问"><button class="btn btn-primary" type="submit">发送 ↑</button></form></div>
+          <div class="section-top"><div><h2>16周 · 周期化训练课表</h2><p>分四个4周训练块；每周有具体活动、强度、组数、课后拉伸与恢复；上方分期卡为目标框架，实际剂量以下方反馈课表为准。第4、8、12、16周审查与必要减量，进阶须由反馈确认。</p></div></div>
+          <button id="planExport" class="btn btn-outline" type="button">下载当前16周教育方案（TXT）</button><label class="check-line"><input autocomplete="off" type="checkbox" id="progressOK">仅在专业条件持续允许，且已完成前周、无不适并恢复良好时，尝试单变量渐进（需结合下方过程记录）。</label><div id="trainingContent"></div>
+          <div class="section-top"><div><h2>宁好智体 · 智能问答</h2><p>基于当前评估给出规则驱动回答；未连接在线大模型。</p></div></div>
+          <div class="assistant-box"><div id="chatMessages" class="chat-messages" aria-live="polite"></div><div class="chat-prompts"><button type="button" data-prompt="我的主要短板是什么">我的主要短板是什么？</button><button type="button" data-prompt="这周我应该怎么安排">这周我应该怎么安排？</button><button type="button" data-prompt="运动时不舒服怎么办">运动时不舒服怎么办？</button></div><form id="chatForm" class="chat-form"><input autocomplete="off" id="chatInput" type="text" maxlength="120" placeholder="例如：我想先改善耐力，怎么开始？" aria-label="向智能助手提问"><button class="btn btn-primary" type="submit">发送 ↑</button></form></div>
           <div class="foot-disclaimer"><strong>使用与责任边界</strong><p>本平台不进行疾病诊断、康复处方或医疗许可判断。问卷不是对官方 PAR-Q+ 的替代。涉及慢性疾病、医学限制或警示症状时，训练强度应由医生和合格运动专业人员评估。全部评估结果均为演示或用户自行输入，不属于项目已验证的临床/教学成效。</p></div>
           <div class="actions"><button class="btn btn-ghost" type="button" id="back1">← 返回健康筛查</button><div class="actions-pair"><button class="btn btn-outline" type="button" id="restartBtn">重新评估</button><button class="btn btn-primary" type="button" id="goNutrition">查看运动营养专题 <span>→</span></button></div></div>
         </section>
 
         <section class="page hidden" id="page3">
-          <div class="page-intro nutrition-intro"><div class="chapter">04 / SPORTS NUTRITION</div><h1>把每一餐，变成训练的支持<span class="period">.</span></h1><p>以《中国居民膳食指南》与运动营养研究为基础，将“合理进餐、充分补给、持续恢复”转化为校园里能做到的选择。这里是健康教育，不是减重食谱或临床营养处方。</p></div>
+          <div class="page-intro nutrition-intro"><div class="chapter">04 / SPORTS NUTRITION</div><h1>把每一餐，变成训练的支持<span class="period">.</span></h1><p>以国际运动营养联合立场文件与共识为基础，将“合理进餐、充分补给、持续恢复”转化为校园里能做到的选择。这里是健康教育，不是减重食谱或临床营养处方。</p></div>
           <div class="nutrition-lead"><div class="nutrition-lead-main"><span class="nutrition-overline">运动营养 · 知行合一</span><h2>训练适应需要运动，也需要足够的食物和休息。</h2><p>不必计算卡路里，不应因体测排名而跳餐。优先做到规律吃饭、食物多样、训练前后有可用的能量。</p></div><div class="nutrition-lead-side"><span>01 / 规律进餐</span><span>02 / 食物多样</span><span>03 / 依运动情境补水</span></div></div>
           <div id="nutritionCustom" class="nutrition-custom" aria-live="polite"></div>
           <div class="section-top"><div><h2>训练前、中、后 · 如何安排</h2><p>普通高校体育课约40—60分钟，通常无需复杂的运动补剂方案。</p></div></div>
@@ -135,15 +142,15 @@
           <div class="section-top"><div><h2>科学知识 · 不靠流行传言</h2><p>结合近年来运动营养研究的重点，区分较可靠的原则与尚需谨慎的做法。</p></div></div>
           <div class="nutrition-science">
             <article><span class="science-index">01</span><h3>有足够能量，才有稳定适应</h3><p>长期吃不够会损害恢复、专注和健康。运动量增加时不要随意减少主食或跳餐；疲劳持续、恢复变差时先检查饮食和休息安排，并咨询专业人员。</p><small>依据：IOC 2023 运动中相对能量不足（REDs）共识</small></article>
-            <article><span class="science-index">02</span><h3>碳水与蛋白，来自日常食物</h3><p>米饭、面、薯类等有助于供给活动所需能量；鸡蛋、鱼、奶、大豆与豆腐等提供蛋白质。把它们分散到日常餐食，不必默认使用补充剂。</p><small>依据：ACSM等 2016 运动与营养立场文件；2025运动营养共识</small></article>
-            <article><span class="science-index">03</span><h3>补水需要因人、因环境调整</h3><p>2026年中国运动补水专家共识强调根据环境、运动时长和个体出汗情况调整。普通体育课通常白水即可；运动饮料不是日常必需品。</p><small>依据：2026 中国运动补水专家共识</small></article>
-            <article><span class="science-index">04</span><h3>营养多样性优先于“网红补剂”</h3><p>多样的谷物、蔬果、豆类与动物性或合理替代食物是基础。补剂研究的证据与适用对象不同，不应自行追逐宣称快速提升成绩的产品。</p><small>依据：中国居民膳食指南（2022）；2025运动营养共识</small></article>
+            <article><span class="science-index">02</span><h3>碳水与蛋白，来自日常食物</h3><p>米饭、面、薯类等有助于供给活动所需能量；鸡蛋、鱼、奶、大豆与豆腐等提供蛋白质。把它们分散到日常餐食，不必默认使用补充剂。</p><small>依据：ACSM等 2016 运动与营养立场文件 [E08]</small></article>
+            <article><span class="science-index">03</span><h3>补水需要因人、因环境调整</h3><p>ACSM补水立场文件强调应结合环境、运动时长和个体出汗情况调整，避免脱水和过量饮水。普通体育课通常白水即可；运动饮料不是日常必需品。</p><small>依据：ACSM 2007 Exercise and Fluid Replacement [E10]</small></article>
+            <article><span class="science-index">04</span><h3>营养多样性优先于“网红补剂”</h3><p>多样的谷物、蔬果、豆类与动物性或合理替代食物是基础。补剂研究的证据与适用对象不同，不应自行追逐宣称快速提升成绩的产品。</p><small>依据：运动营养联合立场（2016）[E08]</small></article>
           </div>
           <div class="safety-note nutrition-safety"><span class="shield-icon">＋</span><div><strong>适用边界与特殊情况</strong><p>这里不根据 BMI 提供体重目标、热量限制或补剂用量；对食物过敏、肾脏疾病、糖尿病等情况，需由医生或注册营养师个别调整。若健康筛查提示风险，通用饮食信息不能替代医学评估，也不代表已获准训练。</p></div></div>
-          <div class="references"><h3>参考来源与适用说明</h3><ol><li><a href="https://www.cnsoc.org/bookpublica/0522202019.html" target="_blank" rel="noopener noreferrer">中国营养学会：《中国居民膳食指南（2022）》</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/26920240/" target="_blank" rel="noopener noreferrer">Academy / DC / ACSM：Nutrition and Athletic Performance（2016）</a></li><li><a href="https://www.sciencedirect.com/science/article/pii/S2666337626001198" target="_blank" rel="noopener noreferrer">中国运动补水专家共识（2026）</a></li><li><a href="https://doi.org/10.1136/bjsports-2023-106994" target="_blank" rel="noopener noreferrer">IOC：Relative Energy Deficiency in Sport（2023）</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12735723/" target="_blank" rel="noopener noreferrer">Spanish Nutrition Society：Nutritional Strategies in Sports（2025）</a></li></ol><p>所有建议为文献原则的课堂化转述，并非上述机构对本系统或本项目效果的认证。</p></div>
+          <div class="references"><h3>参考来源与适用说明</h3><p>营养原则见「证据与范围」E08—E10。竞技运动证据不等于普通体育课必须采用运动员剂量。持续疲劳、月经变化或反复损伤应咨询专业人员；不凭BMI诊断低能量可用性，不提供热量限制、减重目标或补剂处方。</p></div>
           <div class="actions"><button class="btn btn-ghost" type="button" id="nutritionBack">← 返回个人训练支持</button><button class="btn btn-outline" type="button" id="nutritionRestart">重新评估 ↗</button></div>
         </section>
-        <footer class="site-footer"><span>© 宁好智体 · 校园体育教育研究原型</span><span><a href="https://www.nsca.com/education/tools-and-resources/" target="_blank" rel="noopener noreferrer">NSCA</a> · <a href="https://eparmedx.com/" target="_blank" rel="noopener noreferrer">PAR-Q+</a> · <a href="https://www.hnwmxy.edu.cn/tyjxb/info/1613/3412.htm" target="_blank" rel="noopener noreferrer">体测标准</a></span></footer>
+<section class="page hidden v2-section" id="page4"><div class="page-intro"><div class="chapter">05 / PROCESS & EVALUATION</div><h1>把参与过程记录下来<span class="period">.</span></h1><p>这是科研评价原型，未收集真实学生队列，不提供虚构研究效果。仅在本页内存保存；刷新清除，主动导出由你保管。</p></div><div class="v2-note"><strong>评价设计 ≠ 已验证效果</strong><p>基线、第4/8/12/16周及结束后≥6个月随访：结合参与、功能目标、兴趣、自主性、负担与安全事件。需预设研究方案、伦理与知情同意、纳排标准、比较组、缺失数据和事件处理，不凭前后自评分推断因果。[E11、E12]</p></div><form id="recordForm" class="panel" autocomplete="off"><h2>每周记录 / 覆盖更新同一周</h2><div class="form-grid two"><label class="field"><span>周次</span><select id="recordWeek"><option value="1">第1周</option><option value="2">第2周</option><option value="3">第3周</option><option value="4">第4周 · 阶段审查</option><option value="5">第5周</option><option value="6">第6周</option><option value="7">第7周</option><option value="8">第8周 · 阶段审查</option><option value="9">第9周</option><option value="10">第10周</option><option value="11">第11周</option><option value="12">第12周 · 阶段审查</option><option value="13">第13周</option><option value="14">第14周</option><option value="15">第15周</option><option value="16">第16周 · 阶段审查</option></select></label><label class="field"><span>计划任务次数（包括非运动任务）</span><input autocomplete="off" id="planned" type="number" min="0" max="14" step="1" value="2" required></label><label class="field"><span>实际完成次数</span><input autocomplete="off" id="done" type="number" min="0" max="14" step="1" value="0" required></label><label class="field"><span>实际用力感 RPE 0—10</span><input autocomplete="off" id="rpe" type="number" min="0" max="10" step="1" value="0" required></label><label class="field"><span>疲劳 0—10</span><input autocomplete="off" id="fatigue" type="number" min="0" max="10" step="1" value="0" required></label><label class="field"><span>任务接受度 1—5</span><input autocomplete="off" id="acceptance" type="number" min="1" max="5" step="1" value="3" required></label><label class="field"><span>功能适配满意度 1—5</span><input autocomplete="off" id="fit" type="number" min="1" max="5" step="1" value="3" required></label><label class="field"><span>兴趣 1—5</span><input autocomplete="off" id="interest" type="number" min="1" max="5" step="1" value="3" required></label><label class="field"><span>自主性 1—5</span><input autocomplete="off" id="agency" type="number" min="1" max="5" step="1" value="3" required></label><label class="field"><span>教师额外准备/反馈分钟数</span><input autocomplete="off" id="burden" type="number" min="0" max="300" step="1" value="0" required></label><label class="field"><span>安全事件（不填诊断）</span><select id="event"><option value="none">未报告事件</option><option value="pain">疼痛/不适，需调整或评估</option><option value="warning">胸痛/晕厥/异常气促等警示</option></select></label><label class="field"><span>下次活动前恢复情况</span><select id="recovery"><option value="unknown">未确认</option><option value="no">尚未恢复</option><option value="yes">已恢复，无不适</option></select></label></div><p>1—5分为项目自设过程题，1最低、5最高，不是验证量表。功能适配是主观评价，不是临床功能测验。未确认恢复不进阶；警示记录将拦截后续自动训练，须重新评估。</p><button class="btn btn-primary" type="submit">保存 / 更新本周记录</button><p id="recordMessage" role="status"></p></form><div class="panel"><h2>当前记录</h2><p><strong>精简版 V2.0.2</strong> · 导出表头以“周次、计划任务次数、实际完成次数”开头。</p><p id="recordSummary" aria-live="polite"></p><div id="recordList"></div><button class="btn btn-outline" id="recordExport">下载中文过程记录（CSV，Excel可打开） · V2.0.2</button><p>点击后将已保存的每周记录下载到你的电脑，表头与选项值均为中文，可用Excel打开；刷新页面前可下载留存。导出含自报过程与安全字段，无姓名、病名及问卷；仍可能敏感，仅限本人或经授权研究流程使用。此处没有自动上传或浏览器持久化。</p></div><form class="panel" id="coverageForm" onsubmit="return false"><h2>实施覆盖率 · 手动汇总工具</h2><p>自定义研究口径，不是本站后台统计。RE-AIM的代表性、教师采用、实施一致性和长期维持还需另行收集；分母应记录筛选与拒绝参与情况。</p><div class="form-grid two"><label class="field"><span>符合预设条件人数</span><input autocomplete="off" id="eligible" type="number" min="0" step="1"></label><label class="field"><span>实际接触/邀请人数</span><input autocomplete="off" id="invited" type="number" min="0" step="1"></label><label class="field"><span>实际参与人数</span><input autocomplete="off" id="enrolled" type="number" min="0" step="1"></label></div><button id="coverageCalc" class="btn btn-outline">计算自填覆盖率</button><p id="coverageResult" role="status">尚未计算</p></form><div class="panel"><h2>阶段反馈要点</h2><p>第4周：任务是否可及、能否接受；第8周：参与持续性与恢复；第12周：功能目标适配、兴趣与自主性；第16周：经允许的体测复测/目标回顾、教师负担、安全事件及转介完成情况。后续≥6个月考察维持；运动干预队列与非运动学习支持队列分别报告。</p><button id="printAll" class="btn btn-outline">打印支持方案与过程 / 保存 PDF</button><p id="printPrivacy" class="hidden">打印可能含个人过程记录及条件性活动范围，请自行保管，勿留在公共打印机。</p></div></section><section class="page hidden v2-section" id="page5"><div class="page-intro"><div class="chapter">06 / EVIDENCE & SCOPE</div><h1>让每条依据都能被核查<span class="period">.</span></h1><p>资料核验截至2026年10月31日；新近发表不等于证据更强。下方为证据类型分层，不伪造GRADE等级或机构认证。</p></div><div class="v2-note"><strong>已有证据与本项目设计分开呈现</strong><p>指南/系统综述支持一般原则；共识、教材、患者教育和理论框架有各自边界。安全规则、16周分期、反馈阈值及自设问项均为待验证项目设计，未证实能改善体测或临床结局。</p></div><div class="evidence-grid"><article class="evidence-card" id="E01"><small>E01 · 国际分类框架</small><h3>WHO · International Classification of Functioning, Disability and Health (ICF)</h3><p>2001；WHA 54.21于2001-05-22通过</p><p>描述功能、活动、参与与环境。用于需求组织，不诊断疾病；本项目问卷未作心理测量验证。</p><a href="https://www.who.int/classifications/international-classification-of-functioning-disability-and-health" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E02"><small>E02 · 教育设计框架</small><h3>CAST · Universal Design for Learning Guidelines version 3.0</h3><p>2024-07-30发布</p><p>提供多种参与、表征及行动表达方式；用于理解参与和表达方式的差异，不代表本项目效果证据。</p><a href="https://udlguidelines.cast.org/" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E03"><small>E03 · 专业筛查建议</small><h3>ACSM · Preparticipation Screening Guidelines / Updating ACSM’s Recommendations for Exercise Preparticipation Health Screening</h3><p>原始论文2015；官方流程图引用2018第10版；DOI 10.1249/MSS.0000000000000664</p><p>依据症状、已知疾病、当前活动和拟定强度筛查。本项目采取更保守教育分流，并非官方量表、完整算法或医疗许可；PAR-Q+不归属NSCA。</p><a href="https://www.exerciseismedicine.org/assets/page_documents/ACSM%20Preparticipation%20Screening%20Guidelines.pdf" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E04"><small>E04 · 循证公共卫生指南</small><h3>WHO · WHO guidelines on physical activity and sedentary behaviour</h3><p>2020-11-25；ISBN 9789240015128</p><p>成人一般目标每周150—300分钟中等强度有氧及每周≥2天肌力活动，少量起步。慢病/残障有相应章节；不是给所有临床疾病的统一处方，本课表不声称单独达到该总量。</p><a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E05"><small>E05 · 系统综述概览 / 专业立场</small><h3>ACSM · Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews</h3><p>2026-03-05在线；58(4):851–872；DOI 10.1249/MSS.0000000000003897</p><p>适用于≥18岁健康成人。支持规律抗阻活动与个体化；不能外推为骨折、术后或心血管病处方，不证实本项目16周分期或20%—30%减量是最优方案。</p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E06"><small>E06 · 骨科权威患者教育</small><h3>AAOS OrthoInfo · Fractures (Broken Bones)</h3><p>动态患者教育页面，核验2026-10-31；页面未明确统一发布日期</p><p>骨折愈合及活动恢复取决于部位、治疗和临床评估；网页不决定负重、康复动作或回归体育时间。未愈合者拦截自动训练。</p><a href="https://www.orthoinfo.org/diseases--conditions/fractures-broken-bones/" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E07"><small>E07 · 心血管权威患者教育</small><h3>AHA · What is Cardiac Rehabilitation?</h3><p>页面复审2024-04-24</p><p>心脏康复需医学监督与个体团队支持；疾病稳定不等于自动获准。胸痛、晕厥或不稳定症状优先临床评估，本平台不提供心脏康复。</p><a href="https://www.heart.org/en/health-topics/cardiac-rehab/what-is-cardiac-rehabilitation" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E08"><small>E08 · 联合营养立场文件</small><h3>Academy of Nutrition and Dietetics / Dietitians of Canada / ACSM · Nutrition and Athletic Performance</h3><p>2016-03；DOI 10.1016/j.jand.2015.12.006</p><p>主要面向运动员与运动营养专业人员；校园应用仅取规律饮食、食物补给与个体化原则，不套用竞技剂量。素食、过敏或慢病营养需求转介。</p><a href="https://pubmed.ncbi.nlm.nih.gov/26920240/" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E09"><small>E09 · 国际专家共识</small><h3>IOC · 2023 International Olympic Committee’s consensus statement on Relative Energy Deficiency in Sport (REDs)</h3><p>2023；DOI 10.1136/bjsports-2023-106994</p><p>运动人群低能量可用性风险教育；本页不诊断REDs、不用BMI筛查或给出能量阈值。持续疲劳、月经变化、反复损伤须专业评估。</p><a href="https://doi.org/10.1136/bjsports-2023-106994" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E10"><small>E10 · 专业补水立场文件</small><h3>ACSM · Exercise and Fluid Replacement</h3><p>2007-02；39(2):377–390；DOI 10.1249/mss.0b013e31802ca597</p><p>运动补水应个体化，避免过量饮水。普通课堂以水为主；有液体限制者遵医嘱。未将运动饮料或补剂作为日常必需。</p><a href="https://acsm.org/wp-content/uploads/2025/01/Exercise-and-Fluid-Replacement.pdf" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E11"><small>E11 · 复杂干预研究方法框架</small><h3>Skivington et al. · A new framework for developing and evaluating complex interventions: update of Medical Research Council guidance</h3><p>2021-09-30；BMJ 374:n2061；DOI 10.1136/bmj.n2061</p><p>先开展共同设计和可行性研究，再评估效果与实施；利益相关者、情境和项目理论须明确。本项目尚无实验数据。</p><a href="https://www.bmj.com/content/374/bmj.n2061" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E12"><small>E12 · 实施评价框架</small><h3>RE-AIM · What is RE-AIM?</h3><p>动态官方资源；原始框架1999；核验2026-10-31</p><p>覆盖、效果、采用、实施、维持；本站只做记录与自填计算原型，不能代表校级平台统计或因果结论。</p><a href="https://re-aim.org/learn/what-is-re-aim/" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article><article class="evidence-card" id="E13"><small>E13 · 专业教材转述 / 实践教育</small><h3>NSCA · Determination of Resistance Training Frequency</h3><p>2017-05；摘自Essentials of Personal Training, Second Edition</p><p>频次结合训练经验、恢复及其他生活负担；用于无相关禁忌人群的教学组织。不是NSCA发布的医学筛查量表或疾病康复标准。</p><a href="https://www.nsca.com/education/articles/kinetic-select/determination-of-resistance-training-frequency/" target="_blank" rel="noopener noreferrer">核查原始来源 ↗</a></article></div><div class="panel"><h2>隐私与静态站边界</h2><p>所有健康回答、专业范围与记录仅在当前页面内存处理；无后端、登录、在线大模型、追踪脚本、远程字体或自动上传，不用localStorage/IndexedDB保存医疗信息。页面刷新会清除数据；浏览器自身恢复行为和下载/打印文件仍需个人保管。</p><p>GitHub Pages只托管公开静态文件，不能充当医疗信息数据库或研究知情同意系统。请勿把填写后的报告、过程CSV或学生信息提交到公开仓库。正式研究需另建经授权的安全数据系统及伦理流程。</p><h2>评分来源与约定</h2><p>原始Excel两个年级组×两个性别组的全部数值阈值已逐项比对。时间以m.ss转为分:秒，如3.3=3:30。BMI与权重沿用V1.1；低于最低档按0分属原版约定，正式结果以校方为准。体测不适宜者无需为使用本平台冒险复测。</p></div></section><footer class="site-footer"><span>© 宁好智体 · 校园体育教育研究原型</span><span><a href="https://www.nsca.com/education/tools-and-resources/" target="_blank" rel="noopener noreferrer">NSCA</a> · <a href="https://eparmedx.com/" target="_blank" rel="noopener noreferrer">PAR-Q+</a> · <a href="https://www.hnwmxy.edu.cn/tyjxb/info/1613/3412.htm" target="_blank" rel="noopener noreferrer">体测标准</a></span></footer>
       </div>
     </main>
   </div>
@@ -169,9 +176,10 @@ const HEALTH=[
   ['injury','近12个月是否有影响运动的骨关节、肌肉损伤，或接受过相关手术？','只需判断是否影响当前活动'],
   ['restriction','医生是否要求你避免某些运动、降低强度，或只能在医学监督下活动？','医嘱始终优先于网站建议'],
   ['meds','目前是否服用可能影响心率、血压、血糖或运动反应的处方药？','无需填写药物名称或剂量'],
+  ['fracture','当前是否有尚未愈合的骨折？','以临床评估为准，当前不生成自动训练'],
   ['ill','当前是否有发热、急性疾病，或身体状况较平时明显异常？','身体恢复前暂缓训练'],
 ];
-const SEVERE=new Set(['cardiac','chest','syncope','breath','restriction','ill']);
+const SEVERE=new Set(['chest','syncope','breath','fracture','ill']);
 const state={sex:'male',step:0,health:{},result:null,risk:null,chat:[],selectedWeek:1,meal:'ordinary'};
 const $=(id)=>document.getElementById(id);
 const num=(id)=>Number($(id).value);
@@ -230,7 +238,7 @@ function validateMetrics(){
 }
 function showError(s){const el=$('feedback');el.textContent=s;el.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});}
 function clearError(){$('feedback').classList.add('hidden');$('feedback').textContent=''}
-function setStep(i){state.step=i;clearError();for(let n=0;n<4;n++)$('page'+n).classList.toggle('hidden',n!==i);
+function setStepLegacy(i){state.step=i;clearError();for(let n=0;n<4;n++)$('page'+n).classList.toggle('hidden',n!==i);
   document.querySelectorAll('.step,.mobile-step').forEach(b=>b.classList.toggle('active',i===Number(b.dataset.step)));
   $('progressText').textContent=`评估流程 · 第 ${i+1} / 4 步`;$('progressFill').style.width=`${(i+1)/4*100}%`;
   $('crumbName').textContent=['体测评估','健康筛查','个人计划','运动营养'][i];
@@ -247,7 +255,7 @@ function drawHealth(){const box=$('healthQuestions');box.innerHTML='';HEALTH.for
     state.health[key]=v;opt.querySelectorAll('button').forEach(x=>{const active=x.dataset.value===v;x.classList.toggle('chosen',active);x.classList.toggle('warn',active&&v!=='no');x.setAttribute('aria-pressed',String(active))});$('healthCount').textContent=`${Object.keys(state.health).length} / ${HEALTH.length}`;
   });opt.append(b)});row.append(opt);box.append(row);
 })}
-function healthRisk(){const unresolved=HEALTH.filter(([key])=>state.health[key]!=='no');if(!unresolved.length)return {level:'low',questions:[]};
+function healthRiskLegacy(){const unresolved=HEALTH.filter(([key])=>state.health[key]!=='no');if(!unresolved.length)return {level:'low',questions:[]};
   const severe=unresolved.some(([key])=>SEVERE.has(key));return {level:severe?'hold':'review',questions:unresolved.map(([key,text])=>text)};
 }
 const ADVICE={
@@ -272,12 +280,12 @@ function renderScores(r){$('scoreNumber').textContent=r.total.toFixed(1);$('base
     row.append(nm,bar,score,cont);box.append(row)
   });
 }
-function renderRisk(risk){const box=$('riskBanner');if(risk.level==='low'){box.innerHTML='<div class="risk-banner low"><strong>初筛未发现所列风险提示</strong>可以参考下方普通高校体育教学的循序渐进建议。筛查不能排除所有疾病，运动中如出现不适仍需停止并求助。</div>';return}
+function renderRiskLegacy(risk){const box=$('riskBanner');if(risk.level==='low'){box.innerHTML='<div class="risk-banner low"><strong>初筛未发现所列风险提示</strong>可以参考下方普通高校体育教学的循序渐进建议。筛查不能排除所有疾病，运动中如出现不适仍需停止并求助。</div>';return}
   const urgent=risk.level==='hold';const what=urgent?'已发现可能需要优先医疗评估的警示回答':'有需要进一步核实的健康或运动限制信息';
   box.innerHTML=`<div class="risk-banner ${urgent?'severe':''}"><strong>${what}</strong>本页面不会为你自动给出具体训练强度和负荷。请先联系校医、医生或合格运动专业人员，确认可参与的运动类型与限制；若目前出现明显胸痛、晕厥或严重呼吸困难，请及时寻求医疗帮助。</div>`;
 }
 function addInsight(container,label,title,content){const x=document.createElement('div');x.className='insight';const a=document.createElement('div');a.className='insight-label';a.textContent=label;const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.textContent=content;x.append(a,h,p);container.append(x)}
-function renderInsights(r,risk){const box=$('insights');box.innerHTML='';const focus=getFocus(r);
+function renderInsightsV1(r,risk){const box=$('insights');box.innerHTML='';const focus=getFocus(r);
   addInsight(box,'FOCUS 01','建议优先关注：'+ADVICE[focus[0]].short,ADVICE[focus[0]].reason);
   addInsight(box,'FOCUS 02','第二方向：'+ADVICE[focus[1]].short,ADVICE[focus[1]].reason);
   addInsight(box,'EXPLAINABILITY','为什么推荐这些方向？','主要按各项距离100分的差值 × 项目权重排序；如你主动选择了优先目标，会在非医学限制前提下调整排序。BMI不用于判定运动价值或制定体重目标。');
@@ -308,7 +316,7 @@ function trainingFocusTask(key,b){
     longjump:`髋膝踝控制、坐站与小幅度落地稳定练习 ${b.focusMin}；不大量连续跳跃`
   };return tasks[key]||tasks.endurance
 }
-function trainingWeekData(week,r,habit){
+function trainingWeekDataV1(week,r,habit){
   const block=getTrainingBlock(week),easy=WEEK_IS_EASY(week),beginner=habit==='beginner';
   const dayCount=week<=4?2:(beginner&&week<=8?2:3);
   const focus=getFocus(r),RPE=easy?'2—4 / 10（恢复周）':block.rpe;
@@ -322,7 +330,7 @@ function trainingWeekData(week,r,habit){
   }
 }
 function makeElement(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e}
-function renderTraining(r,risk){const box=$('trainingContent');box.innerHTML='';
+function renderTrainingV1(r,risk){const box=$('trainingContent');box.innerHTML='';
   if(risk.level!=='low'){const b=document.createElement('div');b.className='block-risk';b.innerHTML='<h3>须完成专业评估，暂不提供个体训练负荷</h3><p>筛查结果尚未明确适宜运动范围，下面的任何训练周次、组数、强度与拉伸动作都不应直接执行。</p><ul><li>请联系医生或校医，确认可以参与的活动类型和限制条件。</li><li>教师根据专业建议安排同目标的课堂适配任务。</li><li>确认安全后才进入16周课堂参与、反馈与复盘。</li></ul><p>营养专题仅提供普通饮食知识，也不能替代临床营养或医疗建议。</p>';box.append(b);return}
   const intro=makeElement('div','training-method');intro.innerHTML='<strong>训练原则：两个必修单元 + 一个可选单元</strong><p>每周A：基础有氧与弱项技术；B：全身肌力与第二弱项；C：自主轻中等强度活动（按适应情况增加）。力量单元至少间隔约48小时。RPE按0—10主观用力等级估计，3—4为轻至中等、5—6为稍费力；正常应能控制动作和自然呼吸。周期安排便于执行，并不意味着“周期化”本身已被证明优于其他训练方法。</p>';box.append(intro);
   const blocks=makeElement('div','training-block-grid');TRAINING_BLOCKS.forEach((b,i)=>{const c=makeElement('article','training-block');c.append(makeElement('span','block-index',`BLOCK 0${i+1} · 第${b.a}—${b.b}周`),makeElement('h3','',b.name),makeElement('p','',b.description),makeElement('small','',`${b.days}次/周（视适应） · ${b.duration} · RPE ${b.rpe}`));blocks.append(c)});box.append(blocks);
@@ -332,10 +340,10 @@ function renderTraining(r,risk){const box=$('trainingContent');box.innerHTML='';
   choice.addEventListener('click',e=>{const button=e.target.closest('button[data-week]');if(!button)return;state.selectedWeek=Number(button.dataset.week);choice.querySelectorAll('button').forEach(b=>{const on=Number(b.dataset.week)===state.selectedWeek;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on))});renderSelectedWeek(r)});
   box.append(makeElement('h3','training-subtitle','16周负荷与反馈总览'));
   const table=makeElement('table','week-table full-week-table');table.innerHTML='<thead><tr><th>周次</th><th>周期任务</th><th>安排提示</th></tr></thead>';const tb=makeElement('tbody');for(let n=1;n<=16;n++){const row=document.createElement('tr');[`${n}${WEEK_IS_EASY(n)?' · 减量':''}`,getTrainingBlock(n).name,WEEK_CUES[n-1]].forEach(x=>row.append(makeElement('td','',x)));tb.append(row)}table.append(tb);const wrapper=makeElement('div','week-table-scroll');wrapper.append(table);box.append(wrapper);
-  const sources=makeElement('p','training-source');sources.innerHTML='依据与边界：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/" target="_blank" rel="noopener noreferrer">ACSM 2026 抗阻训练立场文件（适用于健康成年人）</a> · <a href="https://www.sportsmed.org/flexibility-and-stretching" target="_blank" rel="noopener noreferrer">AOSSM 柔韧练习建议</a>。进阶、周负荷、组次数是供教师调整的示例模板，不是依据体测成绩精确推导的医学处方。';box.append(sources);
+  const sources=makeElement('p','training-source');sources.innerHTML='依据与边界：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/" target="_blank" rel="noopener noreferrer">ACSM 2026 抗阻训练立场文件（适用于健康成年人）</a> · <a href="https://www.nsca.com/education/articles/kinetic-select/determination-of-resistance-training-frequency/" target="_blank" rel="noopener noreferrer">NSCA 恢复与频次原则</a>。进阶、周负荷、组次数是供教师调整的示例模板，不是依据体测成绩精确推导的医学处方。';box.append(sources);
   renderSelectedWeek(r)
 }
-function renderSelectedWeek(r){const w=trainingWeekData(state.selectedWeek,r,$('habit').value),d=$('weekDetail');if(!d)return;d.innerHTML='';
+function renderSelectedWeekV1(r){const w=trainingWeekData(state.selectedWeek,r,$('habit').value),d=$('weekDetail');if(!d)return;d.innerHTML='';
   const h=makeElement('div','week-detail-head');const left=makeElement('div','');left.append(makeElement('span','week-kicker',`第 ${w.week} 周 · ${w.block.name}`),makeElement('h3','',w.cue));h.append(left,makeElement('span','week-rpe',`RPE ${w.RPE}`));d.append(h);
   const tiles=makeElement('div','week-metrics');[
     ['组织频次',`${w.dayCount}次/周${w.dayCount===2?'（可选轻活动）':''}`],['每次用时',w.block.duration],['力量练习',w.sets+' × '+w.block.reps],['重点目标',ADVICE[w.focus[0]].short]
@@ -378,22 +386,22 @@ function chatReply(question){const r=state.result, risk=state.risk,focus=getFocu
   if(/力量|引体|仰卧|核心/.test(q))return '力量耐力练习建议从动作质量和可完成次数出发，如坐站起立、靠墙推撑、弹力带划船等，以舒适幅度完成，避免憋气或强撑到力竭。';
   return `我可以解释体测得分、运动前安全提示与16周安排。目前优先支持你的方向是「${ADVICE[focus[0]].short}」。这个问答是离线规则引擎，不会诊断疾病。`;
 }
-function renderChat(){state.chat=[];$('chatMessages').innerHTML='';addMessage('你好，我是宁好智体智能分析助手。已根据你填写的体测数据生成报告。你可以询问短板、阶段训练任务或运动安全问题。当前为本地规则问答，不是在线大模型。','bot')}
-function drawResult(){renderRisk(state.risk);renderScores(state.result);renderInsights(state.result,state.risk);renderTraining(state.result,state.risk);renderNutrition();renderChat();}
+function renderChat(){state.chat=[];$('chatMessages').innerHTML='';addMessage('你好，我是宁好智体本地分析助手。已根据你填写的体测数据生成报告。你可以询问短板、阶段训练任务或运动安全问题。当前为本地规则问答，不是在线大模型。','bot')}
+function drawResult(){renderRisk(state.risk);if(state.result){renderScores(state.result);renderInsights(state.result,state.risk);renderTraining(state.result,state.risk);renderChat();}else{$('scoreNumber').textContent='未录入';['baseScore','bonusScore','scoreLevel','bmiValue','scoringGroup'].forEach(id=>$(id).textContent='—');$('scoreBreakdown').replaceChildren();$('insights').replaceChildren();$('chatMessages').replaceChildren();renderTraining(null,state.risk);}renderNutrition();}
 function init(){
   document.querySelectorAll('[data-sex]').forEach(x=>x.addEventListener('click',()=>setSex(x.dataset.sex)));
   $('sampleButton').addEventListener('click',()=>{setSex('male');$('grade').value='2';Object.entries({height:172,weight:65,lung:3900,sprint:8.0,flexibility:12.5,longjump:225,strength:12,endurance:'4:05'}).forEach(([k,v])=>$(k).value=v);clearError()});
   $('toHealth').addEventListener('click',()=>{const data=validateMetrics();if(!data)return;state.result=evaluate(data,state.sex,Number($('grade').value));setStep(1)});
-  $('toPlan').addEventListener('click',()=>{const not=HEALTH.filter(([key])=>!state.health[key]);if(not.length){showError(`请完成全部健康筛查问题（尚有 ${not.length} 项）。`);return}state.risk=healthRisk();drawResult();setStep(2)});
+  $('toPlan').addEventListener('click',()=>{const not=HEALTH.filter(([key])=>!state.health[key]);if(not.length){showError(`请完成全部健康筛查问题（尚有 ${not.length} 项）。`);return}if(!support().restriction||!support().function){showError('请完成医学运动限制和当前功能两项结构化评估。');return}state.risk=healthRisk();drawResult();setStep(2)});
   $('back0').addEventListener('click',()=>setStep(0));$('back1').addEventListener('click',()=>setStep(1));$('goNutrition').addEventListener('click',()=>{renderNutrition();setStep(3)});$('nutritionBack').addEventListener('click',()=>setStep(state.result&&state.risk?2:0));
   $('printButton').addEventListener('click',()=>window.print());
   function reset(){for(const id of ['height','weight','lung','sprint','flexibility','longjump','strength','endurance'])$(id).value='';$('grade').value='1';$('habit').value='beginner';$('goal').value='auto';setSex('male');state.health={};state.result=null;state.risk=null;state.selectedWeek=1;state.meal='ordinary';drawHealth();renderNutrition();setStep(0)}
   $('resetButton').addEventListener('click',reset);$('restartBtn').addEventListener('click',reset);$('nutritionRestart').addEventListener('click',reset);document.querySelectorAll('[data-meal]').forEach(b=>b.addEventListener('click',()=>{state.meal=b.dataset.meal;renderNutrition()}));
-  document.querySelectorAll('.step,.mobile-step').forEach(b=>b.addEventListener('click',()=>{const n=Number(b.dataset.step);if(n===0)setStep(0);else if(n===1&&state.result)setStep(1);else if(n===2&&state.result&&state.risk)setStep(2);else if(n===3){renderNutrition();setStep(3)}else showError('请按流程先完成上一阶段。')}));
+  document.querySelectorAll('.step,.mobile-step').forEach(b=>b.addEventListener('click',()=>{const n=Number(b.dataset.step);if(n===0)setStep(0);else if(n===1)setStep(1);else if(n===2&&state.risk)setStep(2);else if(n===3){renderNutrition();setStep(3)}else if(n>=4){setStep(n)}else showError('请按流程先完成上一阶段。')}));
   $('chatForm').addEventListener('submit',e=>{e.preventDefault();if(!state.result)return;const q=$('chatInput').value.trim();if(!q)return;addMessage(q,'user');addMessage(chatReply(q),'bot');$('chatInput').value=''});
   document.querySelectorAll('[data-prompt]').forEach(b=>b.addEventListener('click',()=>{if(!state.result)return;const q=b.dataset.prompt;addMessage(q,'user');addMessage(chatReply(q),'bot')}));
   drawHealth();renderNutrition();setStep(0);
-  if(location.search.includes('selftest=1'))runSelfTests();
+  // V2 verification is provided in the source package tests.
 }
 function runSelfTests(){
   const test=(name,ok)=>{const d=document.createElement('div');d.className='selftest';d.textContent=(ok?'PASS ':'FAIL ')+name;document.body.append(d);if(!ok)throw Error('Test failed: '+name)};
@@ -413,9 +421,81 @@ function runSelfTests(){
   test('week plan yields content',trainingWeekData(7,evaluate({height:172,weight:65,lung:3900,sprint:8,flexibility:12.5,longjump:225,strength:12,endurance:245},'male',2),'beginner').sessionA.includes('准备活动'));
   window.__SELFTESTS_PASSED__=true;
 }
-window.NinghaoEngine={evaluate,scoreBand,seconds,classifyBMI,healthRisk,trainingWeekData,getTrainingBlock,WEEK_IS_EASY};
+
 window.addEventListener('DOMContentLoaded',init);
 
 </script>
-</body>
+<script>// V2 additions. Health and progress data live only in memory.
+const records={};
+let warningRecorded=false;
+function routeSafety(h,s){
+  const red=['chest','syncope','breath','fracture','ill'];
+  if(red.some(k=>h[k]==='yes')||s.restriction==='forbid')return {level:'hold',questions:[]};
+  if(red.some(k=>h[k]!=='no'))return {level:'review',questions:[]};
+  const review=Object.values(h).some(v=>v!=='no')||s.restriction!=='none'||s.function!=='free';
+  if(!review)return {level:'low',questions:[]};
+  if(s.clearance==='yes'&&s.scope.trim()&&s.limit.trim()&&s.supervision.trim()&&s.valid)return {level:'conditional',questions:[]};
+  return {level:'review',questions:[]};
+}
+function support(){return {restriction:$('medicalLimit').value,function:$('functionStatus').value,clearance:$('clearance').value,scope:$('scope').value,limit:$('limit').value,supervision:$('supervision').value,valid:$('permissionCurrent').checked};}
+function healthRisk(){return warningRecorded?{level:'hold',questions:[]}:routeSafety(state.health,support());}
+function setStep(i){state.step=i;clearError();for(let n=0;n<6;n++)$('page'+n).classList.toggle('hidden',n!==i);document.querySelectorAll('.step,.mobile-step').forEach(b=>{b.classList.toggle('active',i===Number(b.dataset.step));b.setAttribute('aria-current',i===Number(b.dataset.step)?'page':'false')});$('progressText').textContent=['01 体测评分','02 安全与参与评估','03 16周支持计划','04 运动营养','05 过程与评价','06 证据与范围'][i];$('progressFill').style.width=`${(i+1)/6*100}%`;$('crumbName').textContent=$('progressText').textContent;window.scrollTo({top:0,behavior:'smooth'});if(i===4)renderRecords();}
+function renderRisk(risk){const labels={low:'路径 A · 普通分层教学参考',review:'路径 B · 先专业评估',conditional:'路径 B · 已填写条件性允许范围',hold:'路径 C · 暂缓自动训练'};const text={low:'所填回答未触发本项目拦截规则，不等于医学许可或无风险。仅供18岁及以上、无相关限制的学生参考。',review:'暂不显示负荷或拉伸动作。请联系校医、医生及合格运动专业人员，明确允许活动、上限与监督要求。',conditional:'仅展示你填写的专业允许范围及教学组织建议，不自动计算临床训练负荷。网站不能核验医嘱真实性、有效性或充分性。',hold:'不生成具体运动负荷或鼓励运动。骨折未愈合及明确禁忌应按临床意见处理；胸痛、晕厥、异常气促等须及时医疗评估。如正在发生严重症状，在中国大陆拨打120或请身边人协助急救。'};const box=$('riskBanner');box.replaceChildren();const d=makeElement('div','risk-banner '+(risk.level==='low'?'low':risk.level==='hold'?'severe':''));d.append(makeElement('strong','',labels[risk.level]),makeElement('p','',text[risk.level]),makeElement('small','','这是本地规则分流，不是认证风险评级或医学诊断。依据见「证据与范围」E03、E06、E07。'));box.append(d);}
+function renderInsights(r,risk){if(risk.level==='low'){renderInsightsV1(r,risk);return}const box=$('insights');box.replaceChildren();addInsight(box,'参与支持','成绩分析不解除运动限制','七项成绩仅用于教学评价。当前先处理运动参与条件，不把低分当作疾病，也不把高分当作运动许可。');addInsight(box,'全纳支持','替代学习同样属于课堂参与','可选择运动知识学习、录像观察或口头/文字反思，保持共同教学目标，不公开个人诊断。');}
+function trainingWeekData(week,r,habit){
+  const w=trainingWeekDataV1(week,r,habit),prev=records[week-1];
+  if(warningRecorded)return {...w,blocked:true,cue:'既往记录有警示症状：暂停训练并重新接受专业评估'};
+  const good=x=>x&&x.planned>0&&x.recovery==='yes'&&x.event==='none'&&x.rpe<=5&&x.fatigue<7&&x.done>=x.planned;
+  let minutes=habit==='beginner'?10:15;
+  if($('progressOK').checked)for(let n=1;n<week;n++){if(good(records[n])&&!WEEK_IS_EASY(n+1))minutes=Math.min(25,minutes+2);}
+  const adapted=prev&&(prev.fatigue>=7||prev.rpe>=7||prev.done<prev.planned/2||prev.event==='pain'||prev.recovery==='no');
+  const confirmed=good(prev)&&$('progressOK').checked;
+  if(adapted)minutes=Math.max(5,Math.round(minutes*.75));
+  if(w.easy)minutes=Math.max(5,Math.round(minutes*.8));
+  w.dayCount=2;w.RPE=adapted||w.easy?'2—3 / 10，能完整交谈':'3—4 / 10，以能完整交谈为准';w.sets='1组';
+  w.block={...w.block,duration:`约${minutes+18}—${minutes+24}分钟（可分段）`,reps:adapted?'6—8次':'8—10次',sets:'1组',focusMin:'4—6分钟'};
+  w.cue=adapted?'反馈提示耐受不足：减少任务，疼痛持续时先评估':week===1?'建立舒适起点，学习主弱项动作':confirmed?'前周反馈允许：仅小幅增加有氧时长，其他变量维持':'缺少充分耐受确认：维持起点或已确认水平，不自动进阶';
+  w.sessionA=`准备活动8分钟 → 自选快走/走跑结合/骑行 ${minutes}分钟（可分段） → ${trainingFocusTask(w.focus[0],{...w.block,a:1})} → 慢走与整理6—8分钟；不叠加做满`;
+  w.sessionB=`准备活动8分钟 → 坐站、靠墙推撑、弹力带划船及适宜核心稳定，各1组 × ${w.block.reps}，组间休息60—120秒 → ${trainingFocusTask(w.focus[1],{...w.block,a:1})} → 整理6—8分钟；按动作质量缩短`;
+  w.sessionC='可自选轻松日常活动，与力量课错开；不强制增加正式训练次数或突然增加强度';
+  if(w.easy)w.cue+='；本周审查并示例减量约20%，非必须的最佳剂量';
+  return w;
+}
+function renderTraining(r,risk){if(Object.values(records).some(x=>x.event==='warning')){$('trainingContent').replaceChildren(makeElement('div','block-risk','过程记录中有警示症状：暂停运动任务并重新接受专业评估；不显示任何负荷。当前可完成观察或知识学习。'));return}if(risk.level==='low'){if(!r){boxGeneral();return}renderTrainingV1(r,risk);return}const box=$('trainingContent');box.replaceChildren();const d=makeElement('div','panel');if(risk.level==='conditional'){const s=support();d.append(makeElement('h3','','条件性教学支持 · 不生成负荷'));[['允许的活动范围',s.scope],['专业限制与停止条件',s.limit],['监督及复核安排',s.supervision]].forEach(([k,v])=>d.append(makeElement('strong','',k),makeElement('p','',v)));d.append(makeElement('p','','第1—4周：与专业人员和教师核对目标与可及条件；第5—8周：核对参与体验与任务接受度；第9—12周：复核功能适配；第13—16周：反思与后续支持。每次活动依实际专业方案执行，不套用普通训练组次。'));}else d.append(makeElement('h3','','先临床评估与转介'),makeElement('p','','请联系校医/相关专科，明确是否适宜活动。当前可完成观察记录、运动安全知识学习或口头/文字反思等替代体育学习任务；不得据此自行开始康复或拉伸。'));box.append(d);}
+function renderSelectedWeek(r){const w=trainingWeekData(state.selectedWeek,r,$('habit').value);if(w.blocked){$('weekDetail').replaceChildren(makeElement('div','block-risk',w.cue+'。不显示负荷；可选择非运动学习任务。'));return}renderSelectedWeekV1(r);$('weekDetail').prepend(makeElement('p','note-inline','进阶条件：专业条件持续允许、前周完成且恢复良好、无症状，才尝试增加一个变量。未记录则维持；示例不是经实验验证的最优剂量。'));}
+function recordStatus(){if(Object.values(records).some(x=>x.event==='warning'))return '记录有警示事件：暂停运动任务，联系医护并重新评估。网站不能根据后续“感觉好了”自动解除。';return '记录仅反映当前浏览器内自行输入的过程，不代表研究效果。';}
+function renderRecords(){const n=Object.keys(records).length;const b=$('recordSummary');b.textContent=n?`已记录 ${n}/16 周；完成 ${Object.values(records).reduce((s,x)=>s+x.done,0)} 次自报任务。${recordStatus()}`:'暂无过程数据。请记录真实参与情况；没有预置学生统计或实验效果。';const list=$('recordList');list.replaceChildren();Object.entries(records).sort((a,b)=>a[0]-b[0]).forEach(([w,x])=>{list.append(makeElement('p','record-row',`第${w}周 · ${x.done}/${x.planned}次 · RPE ${x.rpe} · 疲劳 ${x.fatigue} · 接受度 ${x.acceptance}/5 · 适配 ${x.fit}/5 · 兴趣 ${x.interest}/5 · 自主性 ${x.agency}/5 · 教师 ${x.burden}分钟 · 安全：${{none:'未报告事件',pain:'疼痛/不适',warning:'警示症状'}[x.event]}`));});}
+function download(name,content,type='text/plain;charset=utf-8'){const u=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+function recordData(){
+  const keys=['planned','done','rpe','fatigue','recovery','acceptance','fit','interest','agency','burden','event'];
+  const headers=['周次','计划任务次数','实际完成次数','主观用力感（0—10）','疲劳程度（0—10）','恢复情况','任务接受度（1—5）','功能适配满意度（1—5）','兴趣（1—5）','自主性（1—5）','教师额外用时（分钟）','安全事件'];
+  const recovery={yes:'已恢复，无不适',no:'尚未恢复',unknown:'未确认'};
+  const events={none:'未报告事件',pain:'疼痛/不适，需调整或评估',warning:'胸痛/晕厥/异常气促等警示'};
+  return '\ufeff'+[headers.join(','),...Object.entries(records).map(([week,r])=>[week,...keys.map(k=>k==='recovery'?recovery[r[k]]:k==='event'?events[r[k]]:r[k])].join(','))].join('\r\n');
+}
+function planSnapshot(){if(warningRecorded||!state.risk||state.risk.level!=='low')return '宁好智体 V2.0\n当前不生成运动负荷。请先临床评估/专业转介，按明确允许范围协商教学；可选观察与知识学习。';if(!state.result)return '尚无体测成绩，不推断弱项或生成个体训练。可先完成参与支持评估。';const lines=['宁好智体 V2.0 · 16周教育方案','本地规则生成；无临床处方或效果保证；依据与适用范围见网页E01—E13。','每次先动态热身8分钟，课后慢走及舒适拉伸6—8分钟。拉伸不弹振、不拉到疼；胸痛/晕厥/异常气促立即停止并求助。','此为当前反馈条件下的快照；未来周须根据真实恢复与专业条件重新评估。'];for(let n=1;n<=16;n++){const w=trainingWeekData(n,state.result,$('habit').value);lines.push(`\n第${n}周 · ${w.block.name}\n${w.cue}\n${w.dayCount}次/周；RPE ${w.RPE}\nA：${w.sessionA}\nB：${w.sessionB}\nC：${w.sessionC}`);}return lines.join('\n');}
+function invalidate(e){state.risk=null;if(e&&$('page0').contains(e.target))state.result=null;$('trainingContent').replaceChildren();$('riskBanner').replaceChildren();$('insights').replaceChildren();$('chatMessages').replaceChildren();}
+function initV2(){
+  $('recordForm').onsubmit=e=>{e.preventDefault();const r={};for(const k of ['planned','done','rpe','fatigue','acceptance','fit','interest','agency','burden'])r[k]=Number($(k).value);if(r.done>r.planned){$('recordMessage').textContent='完成次数不能超过计划次数；额外任务请先纳入计划次数。';return}r.event=$('event').value;r.recovery=$('recovery').value;records[$('recordWeek').value]=r;if(r.event==='warning'){warningRecorded=true;state.risk={level:'hold',questions:[]};renderRisk(state.risk);if(state.result)renderInsights(state.result,state.risk);}renderRecords();$('recordMessage').textContent='已更新本周记录（仅本次页面内存）。';if(state.risk)renderTraining(state.result,state.risk);};
+  $('recordExport').onclick=()=>download('宁好智体_V2.0.2_中文过程记录.csv',recordData(),'text/csv;charset=utf-8');
+  $('planExport').onclick=()=>download('宁好智体_16周教育方案.txt',planSnapshot());
+  $('progressOK').onchange=()=>{if(state.result&&state.risk)renderTraining(state.result,state.risk)};
+  $('coverageCalc').onclick=()=>{const eligible=Number($('eligible').value),invited=Number($('invited').value),enrolled=Number($('enrolled').value);$('coverageResult').textContent=Number.isInteger(eligible)&&Number.isInteger(invited)&&Number.isInteger(enrolled)&&eligible>0&&enrolled>=0&&enrolled<=invited&&invited<=eligible?`接触覆盖率 ${(invited/eligible*100).toFixed(1)}%；实际参与比例 ${(enrolled/eligible*100).toFixed(1)}%。仅计算用户输入，不推断代表性或因果效果。`:'请输入符合条件人数 > 0，且 0 ≤ 参与人数 ≤ 接触人数 ≤ 符合条件人数的整数。';};
+  ['page0','page1'].forEach(id=>$(id).addEventListener('change',()=>{invalidate();}));
+  document.querySelectorAll('#healthQuestions button,[data-sex]').forEach(b=>b.addEventListener('click',invalidate));
+  document.querySelectorAll('#resetButton,#restartBtn,#nutritionRestart').forEach(b=>b.addEventListener('click',()=>{Object.keys(records).forEach(k=>delete records[k]);warningRecorded=false;$('supportForm').reset();$('recordForm').reset();$('progressOK').checked=false;$('coverageForm').reset();$('coverageResult').textContent='尚未计算';$('recordMessage').textContent='';renderRecords();}));
+  $('printAll').onclick=()=>{document.body.classList.add('print-all');window.print();document.body.classList.remove('print-all');};
+  // Browsers may restore form fields after a reload; force sensitive controls to their blank defaults.
+  $('supportForm').reset();$('recordForm').reset();renderRecords();
+}
+window.NinghaoV2={routeSafety,records,recordData};
+window.addEventListener('DOMContentLoaded',initV2);
+
+window.NinghaoEngine={evaluate,scoreBand,seconds,classifyBMI,healthRisk,trainingWeekData,getTrainingBlock,WEEK_IS_EASY};
+
+function boxGeneral(){const box=$('trainingContent');box.replaceChildren(makeElement('div','panel','未录入体测：不推断个人弱项。可以继续参与评估和过程记录；如需要按体测弱项生成16周普通训练，请补充已有、适宜测试所得成绩。'))}
+window.addEventListener('DOMContentLoaded',()=>{$('skipMetrics').onclick=()=>{state.result=null;setStep(1)};});
+window.addEventListener('DOMContentLoaded',()=>{$('activityLevel').onchange=()=>{$('habit').value=$('activityLevel').value==='regular'?'regular':'beginner';};;});
+</script></body>
 </html>
+
